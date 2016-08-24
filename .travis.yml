@@ -1,8 +1,7 @@
 language: ruby
 rvm:
   - 2.2.3
-  - jruby
-  - rbx-2
+
 services:
   - postgresql
 before_install:
