@@ -1,25 +1,16 @@
-# README
+## Board to Death
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This project is designed to let board game enthusiasts share the contents of their game libraries and view friends' libraries. Users can also comment and vote on games.
 
 * Ruby version
+  2.2.4
 
 * System dependencies
+  Requires Postgresql Database
 
-* Configuration
+* Team
+  [Push To] Masters of the Universe
+  jmazrimas, danieljpark, dylancoalwell, gardoroman, vagurtomejia
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+* Trello:
+  https://trello.com/b/3Ms2R7Rp/board-to-death
