@@ -39,7 +39,6 @@ feature "user can add and remove games from collection" do
 
     click_button 'Log in'
     click_on username2.capitalize
-    save_and_open_page
     click_on 'Test game2'
     click_button 'Remove from Collection'
     expect(page).to have_button "Add to Collection"

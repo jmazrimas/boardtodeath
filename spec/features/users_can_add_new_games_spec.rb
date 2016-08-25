@@ -19,6 +19,10 @@ feature "user can add new games" do
     expect(page).to have_content "#{username.capitalize}"
 
     page.fill_in 'Game Name', :with => "New Game Title"
+    page.fill_in 'Description', :with => "Description of New Game Title"
+    page.select "Children", from: "Recommended Age"
+    page.select '2-8', from: "No.Players"
+    page.select "60+ min", from: "Estimated Game Time"
 
     click_on 'Add Game'
 
