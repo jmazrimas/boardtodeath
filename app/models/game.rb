@@ -19,11 +19,13 @@ class Game < ApplicationRecord
   private
 
   def create_tags
-    game = Game.find(self.id)
-    tags_array = self.initial_tags.split(" ")
-    tags_array.each do |tag|
-      tag = Tag.find_or_create_by(name: tag)
-      game.tags << tag
+    unless self.initial_tags == nil
+      game = Game.find(self.id)
+      tags_array = self.initial_tags.split(" ")
+      tags_array.each do |tag|
+        tag = Tag.find_or_create_by(name: tag)
+        game.tags << tag
+      end
     end
   end
 
