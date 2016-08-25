@@ -1,5 +1,10 @@
 <h2><%= @user.username %></h2>
 
+<%= form_for @friendship do |f| %>
+  <%= f.hidden_field :user, :value => current_user %>
+  <%= f.hidden_field :friend, :value => @user %>
+  <%= f.submit "Request Friend" %>
+<% end %>
 
 <h3>Games I added to the Database</h3>
 
