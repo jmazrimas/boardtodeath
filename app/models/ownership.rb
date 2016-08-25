@@ -1,4 +1,4 @@
 class Ownership < ApplicationRecord
-  belongs_to :user
-  belongs_to :owned_games, class_name: :Game
+  belongs_to :owner, class_name: :User
+  belongs_to :owned_game, class_name: :Game
 end
