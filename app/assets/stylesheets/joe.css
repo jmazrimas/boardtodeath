@@ -78,3 +78,8 @@ nav {
 .vote-selected {
 	opacity: 1;
 }
+
+.error {
+	font-size: .8em;
+	color: red;
+}
