@@ -18,7 +18,7 @@ feature "user can register" do
     #   click_link("Show")
 
     within('nav') do
-        expect(page).to have_content "#{username}"
+        expect(page).to have_content "#{username.capitalize}"
     end
 
 
@@ -37,8 +37,8 @@ feature "user can register" do
     click_button 'Log in'
 
     within('nav') do
-        expect(page).to have_content "#{username}"
-    end
+        expect(page).to have_content "#{username.capitalize}"
+    end 
 
     click_on 'Log Out'
 
