@@ -2,7 +2,7 @@ class VotesController < ApplicationController
 
 
   def create
-    value = params[:vote][:value]
+    value = params[:vote][:value].to_i
     game = Game.find_by_id(params[:id])
     user = User.find_by_id(session[:user_id])
 
