@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :ownerships, foreign_key: :owner_id
   has_many :owned_games, through: :ownerships
 
+
   has_many :friendships
   has_many :friends, through: :friendships
 
@@ -23,5 +24,8 @@ class User < ApplicationRecord
   def confirmed_friends
     Friendship.friends(self)
   end
+
+
+  has_many :comments
 
 end

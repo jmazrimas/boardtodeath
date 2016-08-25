@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
   get '/' => "games#index"
 
-  resources :games
+  get '/games/:id/comments' => 'comments#new', as: :new_comment
+  # post '/games/:id/comments' => 'comments#create', as: :create_comment
+
+  resources :games do
+    resources :comments
+  end
 
   # Commented out to fix merge conflict
   # _____________________________________
@@ -16,10 +21,13 @@ Rails.application.routes.draw do
 
   delete '/sessions' => "sessions#delete"
 
+  resources :ownerships
+
   resources :users
   resources :sessions
 
   post '/games/:id/votes' => 'votes#create', as: "game_votes"
 
   post 'users/:id/friendships' => 'friendships#create', as: "friendships"
+
 end

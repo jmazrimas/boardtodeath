@@ -1,12 +1,17 @@
 <h1> <%= @game.title %> </h1>
 
-<%= render "ownership" %>
+
+<% if user_logged_in? %>
+  <%= render partial: "ownership", locals: {owned_game: @game, ownership: @game.ownerships.find_by(owner: current_user)} %>
+<% end %>
 
 
 <h3> Description: <%= @game.description %></h3>
 
+<h2>Comments: </h2>
+<%= render @comment %>
 
-
-
-
+<% if current_user %>
+  <%= link_to 'Add a Comment', new_comment_path %>
+<% end %>
 

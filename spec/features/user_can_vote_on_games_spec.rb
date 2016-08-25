@@ -18,19 +18,19 @@ feature "user can vote on games" do
 
         page.first(".upvote-button").click
 
-        within('.vote-total') do
+        within(page.first('.vote-total')) do
             expect(page).to have_content "1"
         end
 
         page.first(".downvote-button").click
 
-        within('.vote-total') do
+        within(page.first('.vote-total')) do
             expect(page).to have_content "0"
         end
 
         page.first(".downvote-button").click
 
-        within('.vote-total') do
+        within(page.first('.vote-total')) do
             expect(page).to have_content "-1"
         end
 
