@@ -1,13 +1,15 @@
-<div class="single-game"> 
+<div class="single-game">
 
 <div class="votes-box">
-	<%= form_for :game do |f| %>
+	<%= form_for ([game, game.votes.build]) do |f| %>
+    <%= f.hidden_field :value, :value => 1 %>
 		<%= image_submit_tag "uptriangle.png" %>
 	<% end %>
 	<span>3</span>
-	<%= form_for :game do |f| %>
-		<%= image_submit_tag "downtriangle.png" %>
-	<% end %>
+  <%= form_for ([game, game.votes.build]) do |f| %>
+    <%= f.hidden_field :value, :value => -1 %>
+    <%= image_submit_tag "downtriangle.png" %>
+  <% end %>
 </div>
 
 <div class="game-box">

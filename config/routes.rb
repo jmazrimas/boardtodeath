@@ -18,4 +18,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+
+  post '/games/:id/votes' => 'votes#create', as: "game_votes"
 end
