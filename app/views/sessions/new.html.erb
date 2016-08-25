@@ -1,5 +1,9 @@
 <h2>Log in</h2>
 
+<% if @errors %>
+  <%= render "/errors" %>
+<% end %>
+
 <%= form_for(:user, url: '/sessions') do |f| %>
   <div class="field">
     <%= f.label :email %><br />
