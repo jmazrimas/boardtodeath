@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(version: 20160825195533) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "initial_tags"
+    t.string   "age_range"
+    t.string   "num_players"
+    t.string   "play_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "ownerships", force: :cascade do |t|

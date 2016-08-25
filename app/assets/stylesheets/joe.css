@@ -17,7 +17,7 @@ html {
 	font-size: 7em;
 	color: white;
 	background: black;
-	background-position: center; 
+	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url("/assets/j-snow.png");
 }
@@ -26,6 +26,12 @@ html {
 	padding-right: 20%;
 	padding-left: 20%;
 	margin: auto;
+}
+
+#desc-field {
+	width: 400px;
+	height: 100px;
+
 }
 
 nav {
