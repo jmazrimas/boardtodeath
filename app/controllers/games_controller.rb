@@ -12,7 +12,9 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     user = User.find_by_id(session[:user_id])
     @ownership = Ownership.new
-    @comment = Comment.all
+    @comment = @game.comments
+    @tags = @game.tags
+    # @ownership(owned_game: @game, owner: current_user)
   end
 
   def create
@@ -29,7 +31,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:title, :description, :age_range, :num_players, :play_time )
+    params.require(:game).permit(:title, :initial_tags, :description, :age_range, :num_players, :play_time )
   end
 
 

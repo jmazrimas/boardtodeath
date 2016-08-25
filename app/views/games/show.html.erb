@@ -7,9 +7,13 @@
 
 
 <h3> Description: <%= @game.description %></h3>
+
+<h3> Tags: <%= render @tags %>
+
 <h4> Recommended Age Range: <%= @game.age_range%> </h4>
 <h4> No. of Players: <%= @game.num_players %> </h4>
 <h4> Estimated Play Time: <%= @game.play_time %> </h4>
+
 <h2>Comments: </h2>
 <%= render @comment %>
 
