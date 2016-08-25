@@ -9,6 +9,8 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @ownership = Ownership.new
+    # @ownership(owned_game: @game, owner: current_user)
   end
 
   def create
@@ -28,7 +30,7 @@ class GamesController < ApplicationController
     params.require(:game).permit(:title)
   end
 
- 
+
   def require_login
     unless session[:user_id]
       flash[:error] = "You must be logged in to access this section"
