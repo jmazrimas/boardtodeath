@@ -2,11 +2,13 @@ require 'rails_helper'
 
 feature 'user can add comments on games' do
 
-  scenario 'user logs in and comments on a game' do
+  email = "new@user.com"
+  username = "newuser"
+  user = User.create(username: username, email: email, password: "password")
 
-    email = "new@user.com"
-    username = "newuser"
-    User.create(username: username, email: email, password: "password")
+  game = Game.create!(title: 'test game', description: 'this is a test game', user_id: user.id)
+
+  scenario 'user logs in and comments on a game' do
 
     visit "/sessions/new"
 
@@ -15,13 +17,13 @@ feature 'user can add comments on games' do
 
     click_button 'Log in'
 
-    visit '/games/1'
+    visit "/games/#{game.id}"
 
-    click_button 'Add a Comment'
+    click_link 'Add a Comment'
 
     expect(page).to have_content 'Write a Comment'
 
-    page.fill_in 'Write a Comment', :with => 'This is a comment'
+    page.fill_in 'comment[content]', :with => 'This is a comment'
 
     click_button 'Comment'
 
@@ -31,7 +33,7 @@ feature 'user can add comments on games' do
 
   scenario 'user does not see add comment button if not logged in' do
 
-    visit '/games/1'
+    visit "/games/#{game.id}"
 
     page.should_not have_content('Add a Comment')
 
