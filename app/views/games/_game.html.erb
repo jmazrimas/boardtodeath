@@ -1,2 +1,18 @@
-<div class="single-game"> <%= link_to game.title, game_path(game) %> </div>
+<div class="single-game"> 
+
+<div class="votes-box">
+	<%= form_for :game do |f| %>
+		<%= image_submit_tag "uptriangle.png" %>
+	<% end %>
+	<span>3</span>
+	<%= form_for :game do |f| %>
+		<%= image_submit_tag "downtriangle.png" %>
+	<% end %>
+</div>
+
+<div class="game-box">
+	<%= link_to game.title, game_path(game) %>
+</div>
+
+</div>
 <!-- <p> Description: <%=game.description%> </p> -->

@@ -34,6 +34,9 @@ nav {
 }
 
 .single-game {
+	display: flex;
+	align-items: center;
+	height: 70px;
 	padding: 5px;
 	margin: 10px;
 	margin-left: 5%;
@@ -52,4 +55,13 @@ nav {
 	background: linear-gradient(#BAE6F5, #A1C9D6);
 	border: 1px white solid;
 	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+
+.votes-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
 }
