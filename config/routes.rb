@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   delete '/sessions' => "sessions#delete"
 
+  resources :ownerships
+
   resources :users
   resources :sessions
 end
