@@ -5,8 +5,14 @@ Rails.application.routes.draw do
 
   get '/' => "games#index"
 
-  # get '/games/:id' => "games#show", as: "game"
   resources :games
+
+  # Commented out to fix merge conflict
+  # _____________________________________
+  # get '/games/:id' => "games#show", as: "game"
+  # post '/games' => "games#create"
+
+
 
   delete '/sessions' => "sessions#delete"
 
