@@ -1,0 +1,8 @@
+<h1>Write a Comment</h1>
+
+<div class='form'>
+  <%= form_for @comment, :url => "games/#{params[:id]}/comments" do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+  <% end %>
+</div>

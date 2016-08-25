@@ -33,7 +33,7 @@ feature 'user can add comments on games' do
 
     visit '/games/1'
 
-    page.should have_no_content('Add a Comment')
+    page.should_not have_content('Add a Comment')
 
   end
 
