@@ -34,7 +34,11 @@ feature "user can add new games" do
 
     click_on 'Add Game'
 
-    page.should_not have_content "New Game Title"
+    # page.should_not have_content "New Game Title"
+
+    within('form') do
+        expect(page).to have_content "Password"
+    end
 
   end
 
