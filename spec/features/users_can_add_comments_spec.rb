@@ -35,7 +35,7 @@ feature 'user can add comments on games' do
 
     visit "/games/#{game.id}"
 
-    page.should_not have_content('Add a Comment')
+    expect(page).not_to have_content 'Add a Comment'
 
   end
 
