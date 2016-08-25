@@ -1,2 +1,20 @@
-<div class="single-game"> <%= link_to game.title, game_path(game) %> </div>
+<div class="single-game">
+
+<div class="votes-box">
+	<%= form_for ([game, game.votes.build]) do |f| %>
+    <%= f.hidden_field :value, :value => 1 %>
+		<%= image_submit_tag("uptriangle.png", class: "upvote-button "+up_button_class(game)) %>
+	<% end %>
+	<span class="vote-total">Votes: <%= game.vote_total %></span>
+  <%= form_for ([game, game.votes.build]) do |f| %>
+    <%= f.hidden_field :value, :value => -1 %>
+    <%= image_submit_tag("downtriangle.png", class: "downvote-button "+down_button_class(game))  %>
+  <% end %>
+</div>
+
+<div class="game-box">
+	<%= link_to game.title, game_path(game) %>
+</div>
+
+</div>
 <!-- <p> Description: <%=game.description%> </p> -->
