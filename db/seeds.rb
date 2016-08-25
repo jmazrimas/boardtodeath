@@ -17,3 +17,8 @@ g03 = Game.create(title: "Candyland", user_id: u3.id, description: "Game about C
 g04 = Game.create(title: "Snakes and Ladders", user_id: u4.id, description: "Game about Sakes and Ladders")
 g05 = Game.create(title: "Jumanji", user_id: u5.id, description: "Game about Jumanji")
 g06 = Game.create(title: "Zathora", user_id: u5.id, description: "Game about Zathora")
+
+
+o1 = Ownership.create(owned_game_id: 1, user_id: u1.id)
+o2 = Ownership.create(owned_game_id: 2, user_id: u1.id)
+o3 = Ownership.create(owned_game_id: 3, user_id: u1.id)
