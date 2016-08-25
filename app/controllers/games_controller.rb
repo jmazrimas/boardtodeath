@@ -10,9 +10,9 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    user = User.find_by_id(session[:user_id])
     @ownership = Ownership.new
     @comment = Comment.all
-    # @ownership(owned_game: @game, owner: current_user)
   end
 
   def create

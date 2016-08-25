@@ -8,6 +8,14 @@ module ApplicationHelper
     current_user != nil
   end
 
+
+  def own_game?
+    if
+      owns = current_user.owned_games.include?(Game.find(params[:id]))
+    end
+    owns
+  end
+
   def up_button_class(game)
     vote_class_finder(game, 1)
   end
