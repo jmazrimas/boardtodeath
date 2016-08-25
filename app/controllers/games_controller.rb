@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @ownership = Ownership.new
+    @comment = Comment.all
     # @ownership(owned_game: @game, owner: current_user)
   end
 

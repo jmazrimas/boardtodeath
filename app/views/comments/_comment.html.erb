@@ -1,0 +1,4 @@
+<div class='comment'><%= comment.content %></div>
+<span class='commenter'><%= link_to comment.user.username, user_path(comment.user) %></span>
+<span class='commenter'>commented on: <%= comment.created_at.strftime("%Y %m %d")%></span>
+<br><br>

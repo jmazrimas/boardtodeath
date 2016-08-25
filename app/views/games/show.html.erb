@@ -5,8 +5,10 @@
 
 <h3> Description: <%= @game.description %></h3>
 
+<h2>Comments: </h2>
+<%= render @comment %>
 
-
-
-
+<% if current_user %>
+  <%= link_to 'Add a Comment', new_comment_path %>
+<% end %>
 
