@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/' => "games#index"
 
   get '/games/:id' => "games#show", as: "game"
+  post '/games' => "games#create"
   # resources :games
 
   delete '/sessions' => "sessions#delete"
