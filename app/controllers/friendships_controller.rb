@@ -24,7 +24,9 @@ class FriendshipsController < ApplicationController
 
   def destroy
     friendship = Friendship.find_by(friend_params)
+    inverse_friendship = Friendship.find_by(user: friendship.friend, friend: friendship.user)
     friendship.destroy
+    inverse_friendship.destroy if inverse_friendship
     redirect_back fallback_location:  "/"
   end
 
