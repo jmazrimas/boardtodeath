@@ -18,7 +18,8 @@ html {
 	color: white;
 	background: black;
 	background-position: center; 
-	background-image: url("https://cdn0.vox-cdn.com/thumbor/BL1Q3IrrGdYCJMMPiyv0WN9ke2w=/cdn0.vox-cdn.com/uploads/chorus_asset/file/3790162/Screen_Shot_2015-06-14_at_10.14.08_PM.0.png");
+	background-repeat: no-repeat;
+	background-image: url("/assets/j-snow.png");
 }
 
 #main-container {
