@@ -12,12 +12,20 @@ class FriendshipsController < ApplicationController
 
       friend_request = Friendship.find_or_initialize_by(friend_params)
       if friend_request.save
-        redirect_to user_path(friend_request.friend.id)
+        redirect_back fallback_location:  "/"
+        # redirect_to user_path(friend_request.friend.id)
       else
         @errors = 'Unable to request friend'
-        redirect_to user_path(friendship[user])
+        redirect_back fallback_location:  "/"
+        # redirect_to user_path(friendship[user])
       end
     end
+  end
+
+  def destroy
+    friendship = Friendship.find_by(friend_params)
+    friendship.destroy
+    redirect_back fallback_location:  "/"
   end
 
   private

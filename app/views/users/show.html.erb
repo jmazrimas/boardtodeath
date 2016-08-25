@@ -1,22 +1,35 @@
+<div>
+  <span class="inline-span"><h1><%= @user.username %>'s Profile Page</h1></span>
+  <span class="inline-span">
 
-<h1><%= @user.username %>'s Profile Page</h1>
+  <% if current_user == @user %>
+  <% elsif !current_user.friends.include?(@user) %>
+    <%= form_for [current_user, @friendship] do |f| %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :friend_id, :value => @user.id %>
+      <%= f.submit "Request Friend" %>
+    <% end %>
+  <% else %>
+    <%= form_for([current_user, @friendship], method: :delete) do |f| %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :friend_id, :value => @user.id %>
+      <%= f.submit "Remove Friend" %>
+    <% end %>
+  <% end %>
+  </span>
+</div>
 
-<%= form_for @friendship do |f| %>
-  <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= f.hidden_field :friend_id, :value => @user.id %>
-  <%= f.submit "Request Friend" %>
+<% if current_user == @user %>
+  <%= render "friend_requests" %>
+  <%= render "friends" %>
 <% end %>
 
 <h3>Games I added to the Database</h3>
 
 <%= render @user.games %>
 
-<h3>My Friends </h3>
+
 
 <h3>Games I own </h3>
 
 <%= render @user.owned_games %>
-
-<h3>Games I added to the Database</h3>
-
-<%= render @user.games %>

@@ -30,7 +30,6 @@ class User < ApplicationRecord
     Friendship.friends(self)
   end
 
-
   has_many :comments
 
 end
