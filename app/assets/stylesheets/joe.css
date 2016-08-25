@@ -1,0 +1,55 @@
+
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+html {
+	background: linear-gradient(#DEF7FF, #BABABA);
+}
+
+
+#title {
+	font-family: 'Amatica SC', cursive;
+	font-weight: bolder;
+	text-align: center;
+	height: 300px;
+	line-height: 300px;
+	font-size: 7em;
+	color: white;
+	background: black;
+	background-position: center; 
+	background-image: url("https://cdn0.vox-cdn.com/thumbor/BL1Q3IrrGdYCJMMPiyv0WN9ke2w=/cdn0.vox-cdn.com/uploads/chorus_asset/file/3790162/Screen_Shot_2015-06-14_at_10.14.08_PM.0.png");
+}
+
+#main-container {
+	padding-right: 20%;
+	padding-left: 20%;
+	margin: auto;
+}
+
+nav {
+	padding-right: 20%;
+	padding-left: 20%;
+	height: 2em;
+}
+
+.single-game {
+	padding: 5px;
+	margin: 5px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+.add-game {
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
