@@ -5,7 +5,7 @@
     <%= f.hidden_field :value, :value => 1 %>
 		<%= image_submit_tag "uptriangle.png" %>
 	<% end %>
-	<span>3</span>
+	<span><%= game.vote_total %></span>
   <%= form_for ([game, game.votes.build]) do |f| %>
     <%= f.hidden_field :value, :value => -1 %>
     <%= image_submit_tag "downtriangle.png" %>

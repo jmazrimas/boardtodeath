@@ -6,4 +6,8 @@ class Game < ApplicationRecord
   has_many :ownerships, foreign_key: :owned_game_id
   has_many :owners, through: :ownerships
 
+  def vote_total
+    self.votes.sum(:value)
+  end
+
 end
