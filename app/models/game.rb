@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
+  after_save :create_tags
 
   belongs_to :user
   has_many :votes
@@ -8,8 +9,24 @@ class Game < ApplicationRecord
 
   has_many :comments
 
+  has_many :taggings
+  has_many :tags, through: :taggings
+
   def vote_total
     self.votes.sum(:value)
+  end
+
+  private
+
+  def create_tags
+    unless self.initial_tags == nil
+      game = Game.find(self.id)
+      tags_array = self.initial_tags.split(" ")
+      tags_array.each do |tag|
+        tag = Tag.find_or_create_by(name: tag)
+        game.tags << tag
+      end
+    end
   end
 
 end

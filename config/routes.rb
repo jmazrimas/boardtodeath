@@ -30,6 +30,10 @@ Rails.application.routes.draw do
 
   post '/games/:id/votes' => 'votes#create', as: "game_votes"
 
+
   # post 'users/:id/friendships' => 'friendships#create', as: "friendships"
+
+  resources :tags
+
 
 end

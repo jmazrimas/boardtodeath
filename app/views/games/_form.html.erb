@@ -2,6 +2,17 @@
 	<%= form_for @game do |f| %>
 	  <%= f.label :title, "Game Name" %>:
 	  <%= f.text_field :title %>
+    <%= f.label :initial_tags, "Tags" %>:
+    <%= f.text_field :initial_tags, size: 25, placeholder: "separate tags by spaces" %>
+    <%= f.label :description, "Description" %>:<br>
+    <%= f.text_area :description, cols: 50, rows: 4 %><br>
+    <%= f.label :age_range, "Recommended Age" %>:
+    <%= f.select :age_range, ['All Ages', 'Preschool', 'Children', 'Teen', 'Adult'] %>
+    <%= f.label :num_players, "No.Players" %>:
+    <%= f.select :num_players, ['1', '2', '2-4', '2-8'] %>
+    <%= f.label :play_time, "Estimated Game Time" %>:
+    <%= f.select :play_time, ['Up to 15 min', '15-30 min', '30-60 min', '60+ min'] %>
+
 	  <%= f.submit "Add Game" %>
 	<% end %>
 </div>

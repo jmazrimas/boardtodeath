@@ -28,6 +28,12 @@ html {
 	margin: auto;
 }
 
+#desc-field {
+	width: 400px;
+	height: 100px;
+
+}
+
 nav {
 	padding-right: 20%;
 	padding-left: 20%;
