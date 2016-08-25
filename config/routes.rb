@@ -26,4 +26,6 @@ Rails.application.routes.draw do
 
   post '/games/:id/votes' => 'votes#create', as: "game_votes"
 
+  resources :tags
+
 end

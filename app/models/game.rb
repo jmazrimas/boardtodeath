@@ -22,7 +22,8 @@ class Game < ApplicationRecord
     game = Game.find(self.id)
     tags_array = self.initial_tags.split(" ")
     tags_array.each do |tag|
-      game.tags.find_or_create_by(name: tag)
+      tag = Tag.find_or_create_by(name: tag)
+      game.tags << tag
     end
   end
 
