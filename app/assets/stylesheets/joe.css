@@ -66,3 +66,15 @@ nav {
 	align-items: center;
 	width: 20%;
 }
+
+.vote-disabled {
+	visibility: hidden;
+}
+
+.vote-neutral {
+	opacity: .5;
+}
+
+.vote-selected {
+	opacity: 1;
+}
