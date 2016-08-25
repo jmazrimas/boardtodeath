@@ -10,8 +10,6 @@ module ApplicationHelper
 
 
   def own_game?
-    p params[:id]
-    p current_user.username
     if
       owns = current_user.owned_games.include?(Game.find(params[:id]))
     end
