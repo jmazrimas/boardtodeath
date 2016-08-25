@@ -3,6 +3,7 @@ class GamesController < ApplicationController
   before_action :require_login, only: [:create]
 
   def index
+    @vote = Vote.new
     @game = Game.new
     @games = Game.all
   end
