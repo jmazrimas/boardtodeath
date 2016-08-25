@@ -27,14 +27,12 @@ ActiveRecord::Schema.define(version: 20160825195533) do
     t.string   "title"
     t.integer  "user_id"
     t.text     "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "initial_tags"
     t.string   "age_range"
     t.string   "num_players"
     t.string   "play_time"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "initial_tags"
   end
 
   create_table "ownerships", force: :cascade do |t|
