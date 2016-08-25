@@ -14,6 +14,25 @@ module ApplicationHelper
       owns = current_user.owned_games.include?(Game.find(params[:id]))
     end
     owns
+
+  def up_button_class(game)
+    vote_class_finder(game, 1)
+  end
+
+  def down_button_class(game)
+    vote_class_finder(game, -1)
+  end
+
+  def vote_class_finder(game, value)
+    vote = Vote.find_by(user: current_user, game: game)
+
+    if !user_logged_in?
+      "vote-disabled"
+    elsif vote && vote.value == value
+      "vote-selected"
+    else
+      "vote-neutral"
+    end
   end
 
 end

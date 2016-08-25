@@ -3,6 +3,7 @@ class GamesController < ApplicationController
   before_action :require_login, only: [:create]
 
   def index
+    @vote = Vote.new
     @game = Game.new
     @games = Game.all
   end
@@ -10,6 +11,8 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     user = User.find_by_id(session[:user_id])
+    @ownership = Ownership.new
+    @comment = Comment.all
   end
 
   def create

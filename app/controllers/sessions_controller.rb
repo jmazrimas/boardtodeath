@@ -11,11 +11,15 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:user][:email])
-    if user.authenticate(params[:user][:password])
+    if !user
+      @errors = ["Email not recognized"]
+      render 'new'
+    elsif user.authenticate(params[:user][:password])
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/sessions/new'
+      @errors = ["Unable to log in"]
+      render 'new'
     end
   end
 
