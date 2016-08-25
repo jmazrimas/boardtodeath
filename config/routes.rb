@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/' => "games#index"
 
   get '/games/:id/comments' => 'comments#new', as: :new_comment
-  post '/games/:id/comments' => 'comments#create', as: :create_comment
+  # post '/games/:id/comments' => 'comments#create', as: :create_comment
 
   resources :games do
     resources :comments

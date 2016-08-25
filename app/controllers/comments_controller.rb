@@ -5,14 +5,18 @@ class CommentsController < ApplicationController
   end
 
   def create
-    game = Game.find_by_id(params[:id])
-    comment = game.comments.new(comment_params)
+    comment = Comment.new(
+      content: params[:comment][:content],
+      game_id: params[:game_id],
+      user_id: session[:user_id]
+      )
 
-    if game.save
-      redirect_to :back
+    if comment.save
+      redirect_to "/games/#{params[:game_id]}"
     else
       redirect_to :back
     end
+
   end
 
 end
