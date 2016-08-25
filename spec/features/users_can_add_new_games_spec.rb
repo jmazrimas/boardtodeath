@@ -16,7 +16,7 @@ feature "user can add new games" do
     click_button 'Log in'
 
 
-    expect(page).to have_content "#{username}"
+    expect(page).to have_content "#{username.capitalize}"
 
     page.fill_in 'Game Name', :with => "New Game Title"
 
