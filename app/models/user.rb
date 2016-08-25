@@ -13,8 +13,13 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
 
+
   def self.are_friends?(user1, user2)
     user1.friends.include?(user2) && user2.friends.include?(user1)
+  end
+
+  def friends_with?(other_user)
+    self.friends.include?(other_user) && other_user.friends.include?(self)
   end
 
   def friend_requests

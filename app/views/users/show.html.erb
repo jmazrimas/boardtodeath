@@ -2,8 +2,8 @@
 <h1><%= @user.username %>'s Profile Page</h1>
 
 <%= form_for @friendship do |f| %>
-  <%= f.hidden_field :user, :value => current_user %>
-  <%= f.hidden_field :friend, :value => @user %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :friend_id, :value => @user.id %>
   <%= f.submit "Request Friend" %>
 <% end %>
 
