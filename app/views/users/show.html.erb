@@ -29,18 +29,23 @@
 
 <% if current_user == @user %>
   <%= render "friend_requests" %>
-  <%= render "friends" %>
 <% end %>
 
+<% if current_user.friends_with?(@user) || (current_user == @user) %>
+  <%= render "friends" %>
 
-<div class="mid-content-box">
-  <h3>Games I added to the Database</h3>
 
-  <%= render @user.games %>
-</div>
+  <div class="mid-content-box">
+    <h3>Games I added to the Database</h3>
 
-<div class="mid-content-box">
-  <h3>Games I own </h3>
+    <%= render @user.games %>
+  </div>
 
-  <%= render @user.owned_games %>
-</div>
+  <div class="mid-content-box">
+    <h3>Games I own </h3>
+
+    <%= render @user.owned_games %>
+
+  </div>
+<% end %>
+>>>>>>> master
