@@ -1,5 +1,7 @@
 <h1> <%= @game.title %> </h1>
 
+<span><%= image_tag(@game.image) %></span>
+
 
 <% if user_logged_in? %>
   <%= render partial: "ownership", locals: {owned_game: @game, ownership: @game.ownerships.find_by(owner: current_user)} %>

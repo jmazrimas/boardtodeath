@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825195533) do
+ActiveRecord::Schema.define(version: 20160825233059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(version: 20160825195533) do
     t.string   "age_range"
     t.string   "num_players"
     t.string   "play_time"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                                                                                        null: false
+    t.datetime "updated_at",                                                                                        null: false
     t.string   "initial_tags"
+    t.string   "image",        default: "https://openclipart.org/download/244704/Clovece_nezlob_se_board_game.svg"
   end
 
   create_table "ownerships", force: :cascade do |t|
@@ -56,9 +57,10 @@ ActiveRecord::Schema.define(version: 20160825195533) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username",                     null: false
-    t.string "email",           default: "", null: false
-    t.string "password_digest", default: "", null: false
+    t.string "username",                                                                                                      null: false
+    t.string "email",           default: "",                                                                                  null: false
+    t.string "password_digest", default: "",                                                                                  null: false
+    t.string "avatar",          default: "https://pixabay.com/static/uploads/photo/2014/04/02/10/24/pimp-303718_960_720.png"
   end
 
   create_table "votes", force: :cascade do |t|
