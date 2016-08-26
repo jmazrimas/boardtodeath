@@ -1,6 +1,6 @@
 <div class="single-game">
 
-<%= render partial: 'votes', locals: {game: game} %>
+<%= render partial: 'games/votes', locals: {game: game} %>
 
 <div class="game-box">
 	<%= link_to game.title, game_path(game) %>
