@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
   resources :ownerships
 
+  # get '/users/:id/edit' => 'users#edit'
+  # patch '/users/:id' => 'users#edit'
+
   resources :users do
     resources :friendships
   end
