@@ -1,0 +1,14 @@
+<h2>Upload an image</h2>
+
+<%= form_for :game, url: "/games/#{@game.id}", method: :patch do |f| %>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>

@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include ApplicationHelper
 
   def new
     @user = User.new
@@ -26,10 +25,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+    if current_user.id != @user.id
+      redirect_to '/sessions/new'
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to @user
+    else
+      redirect_to :back
+    end
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :avatar)
   end
 
 end

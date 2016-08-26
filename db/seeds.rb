@@ -8,7 +8,7 @@
 u1 = User.create(username: "Gardoman" , email: "gardo@email.com", password: "password")
 u2 = User.create(username: "danpark" , email: "danpark@email.com", password: "password")
 u3 = User.create(username: "joemaz" , email: "joemaz@email.com", password: "password")
-u4 = User.create(username: "dylanc" , email: "dylanc@email.com", password: "password")
+u4 = User.create(username: "dylanc" , email: "dylanc@email.com", password: "password", avatar: "https://anenglishwomaninsalem.files.wordpress.com/2012/01/letter-homer-sour.jpg")
 u5 = User.create(username: "veronica" , email: "veronica@email.com", password: "password")
 
 g01 = Game.create(title: "Monopoly", user_id: u1.id, description: "Game about Money", age_range: "All Ages", num_players: "2-8", play_time: "60+ min")

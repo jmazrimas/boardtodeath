@@ -28,10 +28,27 @@ class GamesController < ApplicationController
     end
   end
 
+  def edit
+    @game = Game.find(params[:id])
+    if current_user && current_user.id == @game.user.id
+    else
+      redirect_to root_path
+    end
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    if @game.update_attributes(game_params)
+      redirect_to @game
+    else
+      redirect_to :back
+    end
+  end
+
   private
 
   def game_params
-    params.require(:game).permit(:title, :initial_tags, :description, :age_range, :num_players, :play_time )
+    params.require(:game).permit(:title, :initial_tags, :description, :age_range, :num_players, :play_time, :image )
   end
 
 
