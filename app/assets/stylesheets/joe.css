@@ -131,3 +131,8 @@ h3 {
 	background: #5894A8;
 	border: 1px white solid;
 }
+
+.default_image {
+	height: 30em;
+	width: 30em;
+}

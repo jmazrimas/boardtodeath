@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20160825233059) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username",                                                                                                      null: false
-    t.string "email",           default: "",                                                                                  null: false
-    t.string "password_digest", default: "",                                                                                  null: false
-    t.string "avatar",          default: "https://pixabay.com/static/uploads/photo/2014/04/02/10/24/pimp-303718_960_720.png"
+    t.string "username",                                                                                     null: false
+    t.string "email",           default: "",                                                                 null: false
+    t.string "password_digest", default: "",                                                                 null: false
+    t.string "avatar",          default: "https://static.pexels.com/photos/136349/pexels-photo-136349.jpeg"
   end
 
   create_table "votes", force: :cascade do |t|
