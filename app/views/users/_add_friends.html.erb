@@ -1,4 +1,10 @@
 <% if current_user == @user %>
+<% elsif current_user.unanswered_request?(@user) %>
+  <%= form_for([current_user, @friendship], method: :delete) do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :friend_id, :value => @user.id %>
+    <%= f.submit "Rescind Request" %>
+  <% end %>
 <% elsif !current_user.friends.include?(@user) %>
   <%= form_for [current_user, @friendship] do |f| %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
