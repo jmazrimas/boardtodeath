@@ -1,0 +1,332 @@
+
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+html {
+	background: linear-gradient(#DEF7FF, #BABABA);
+}
+
+
+#title {
+	font-family: 'Amatica SC', cursive;
+	font-weight: bolder;
+	text-align: center;
+	height: 300px;
+	line-height: 300px;
+	font-size: 7em;
+	color: white;
+	background: black;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#main-container {
+	padding-right: 20%;
+	padding-left: 20%;
+	margin: auto;
+}
+
+#desc-field {
+	width: 400px;
+	height: 100px;
+
+}
+
+nav {
+	padding-right: 20%;
+	padding-left: 20%;
+	height: 2em;
+}
+
+.single-game {
+	display: flex;
+	align-items: center;
+	height: 70px;
+	padding: 5px;
+	margin: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+.add-game {
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+
+.votes-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+}
+
+.vote-disabled {
+	visibility: hidden;
+}
+
+.vote-neutral {
+	opacity: .5;
+}
+
+.vote-selected {
+	opacity: 1;
+}
+
+.error {
+	font-size: .8em;
+	color: red;
+}
+
+
+.mid-content-box {
+	/*display: flex;*/
+	align-items: center;
+	padding: 0 15px;
+	margin: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+h3 {
+	letter-spacing: .5em;
+}
+
+.friend-requests {
+	/*display: flex;*/
+	align-items: center;
+	padding: 0 15px;
+	margin: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background: linear-gradient(#BAE6F5, #A1C9D6);
+	border: 1px white solid;
+	box-shadow: 7px 6px 1px -1px rgba(0,0,0,0.75);
+}
+
+.inline-span {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.friend-request {
+	letter-spacing: 0;
+	margin: 0 5%;
+	padding: 5px;
+	background: #5894A8;
+	border: 1px white solid;
+}
+
+.default_image {
+	height: 20em;
+	width: 20em;
+	align-items: center;
+	padding: 0 15px;
+	margin: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+/* line 2, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 6, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+html {
+  background: linear-gradient(#DEF7FF, #BABABA);
+}
+
+/* line 11, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+#title {
+  font-family: 'Amatica SC', cursive;
+  font-weight: bolder;
+  text-align: center;
+  height: 300px;
+  line-height: 300px;
+  font-size: 7em;
+  color: white;
+  background: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/assets/j-snow-373d30cec5e7fd9667d6f752286d82eeed6e53948242a723a5874e1f0b69da21.png);
+}
+
+/* line 25, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+#main-container {
+  padding-right: 20%;
+  padding-left: 20%;
+  margin: auto;
+}
+
+/* line 31, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+#desc-field {
+  width: 400px;
+  height: 100px;
+}
+
+/* line 37, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+nav {
+  padding-right: 20%;
+  padding-left: 20%;
+  height: 2em;
+}
+
+/* line 43, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.single-game {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 5px;
+  margin: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: linear-gradient(#BAE6F5, #A1C9D6);
+  border: 1px white solid;
+  box-shadow: 7px 6px 1px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 56, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.add-game {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: linear-gradient(#BAE6F5, #A1C9D6);
+  border: 1px white solid;
+  box-shadow: 7px 6px 1px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 68, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.votes-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+/* line 76, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.vote-disabled {
+  visibility: hidden;
+}
+
+/* line 80, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.vote-neutral {
+  opacity: .5;
+}
+
+/* line 84, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.vote-selected {
+  opacity: 1;
+}
+
+/* line 88, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.error {
+  font-size: .8em;
+  color: red;
+}
+
+/* line 94, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.mid-content-box {
+  /*display: flex;*/
+  align-items: center;
+  padding: 0 15px;
+  margin: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: linear-gradient(#BAE6F5, #A1C9D6);
+  border: 1px white solid;
+  box-shadow: 7px 6px 1px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 106, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+h3 {
+  letter-spacing: .5em;
+}
+
+/* line 110, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.friend-requests {
+  /*display: flex;*/
+  align-items: center;
+  padding: 0 15px;
+  margin: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: linear-gradient(#BAE6F5, #A1C9D6);
+  border: 1px white solid;
+  box-shadow: 7px 6px 1px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 122, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.inline-span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 127, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.friend-request {
+  letter-spacing: 0;
+  margin: 0 5%;
+  padding: 5px;
+  background: #5894A8;
+  border: 1px white solid;
+}
+
+/* line 135, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.default_image {
+  height: 20em;
+  width: 20em;
+  align-items: center;
+  padding: 0 15px;
+  margin: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* line 145, /Users/JoeMazrimas/devbootcamp/onsite/boardtodeath/app/assets/stylesheets/joe.css.scss */
+.center-image {
+  width: 1000px;
+  height: 2000px;
+  background-color: pink;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/*.games-index {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#game-list {
+}*/
+
+

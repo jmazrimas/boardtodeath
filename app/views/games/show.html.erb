@@ -1,26 +1,31 @@
-<h1> <%= @game.title %> </h1>
 
-<%= image_tag @game.image, class: 'default_image' %>
+<div class="mid-content-box">
+	<span class="inline-span">
+		<h1> <%= @game.title %> </h1>
+	</span>
+	<span class="inline-span">
+		<% if user_logged_in? %>
+		  <%= render partial: "ownership", locals: {owned_game: @game, ownership: @game.ownerships.find_by(owner: current_user)} %>
+		<% end %>
+	</span>
+
+	<div class="center-image">
+		<%= image_tag @game.image, class: 'default_image' %>
+	</div>
 
 
-<% if user_logged_in? %>
-  <%= render partial: "ownership", locals: {owned_game: @game, ownership: @game.ownerships.find_by(owner: current_user)} %>
-<% end %>
-
-<div class='mid-content-box'>
-  <h3> Description: <%= @game.description %></h3>
-
-  <h3> Tags: <%= render @tags %>
-
-  <h4> Recommended Age Range: <%= @game.age_range%> </h4>
-  <h4> No. of Players: <%= @game.num_players %> </h4>
-  <h4> Estimated Play Time: <%= @game.play_time %> </h4>
+  <p> Description: <%= @game.description %> </p>
+  <p> Recommended Age Range: <%= @game.age_range%> </p>
+  <p> No. of Players: <%= @game.num_players %> </p>
+  <p> Estimated Play Time: <%= @game.play_time %> </p><br>
+  <p> Tags: <%= render @tags %></p>
 </div>
 
-<h2>Comments: </h2>
-<%= render @comment %>
+<div class="mid-content-box">
+	<h2>Comments: </h2>
+		<%= render @comment %>
 
-<% if current_user %>
-  <%= link_to 'Add a Comment', new_comment_path %>
-<% end %>
-
+	<% if current_user %>
+	  <%= link_to 'Add a Comment', new_comment_path %>
+	<% end %>
+</div>
