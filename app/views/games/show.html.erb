@@ -1,6 +1,6 @@
 <h1> <%= @game.title %> </h1>
 
-<div class='mid-content-box'><%= image_tag(@game.image) %></div>
+<%= image_tag @game.image, class: 'default_image' %>
 
 
 <% if user_logged_in? %>

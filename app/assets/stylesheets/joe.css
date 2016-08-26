@@ -133,6 +133,11 @@ h3 {
 }
 
 .default_image {
-	height: 30em;
-	width: 30em;
+	height: 20em;
+	width: 20em;
+	align-items: center;
+	padding: 0 15px;
+	margin: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
 }
