@@ -1,0 +1,16 @@
+<div class="friend-requests">
+  <h3>Friend Requests</p>
+  <% current_user.friend_requests.each do |new_friend| %>
+    <div class="friend-request">
+      <span class="inline-span"><%= new_friend.email %></span>
+      <span class="inline-span">
+      <%= form_for([current_user, @friendship]) do |f| %>
+
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :friend_id, :value => new_friend.id %>
+        <%= f.submit "Accept" %>
+      <% end %>
+      </span>
+    </div>
+  <% end %>
+</div>

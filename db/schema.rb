@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20160825233059) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "friend_id",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.string   "title"
     t.integer  "user_id"
