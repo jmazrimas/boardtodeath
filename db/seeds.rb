@@ -137,9 +137,19 @@ c33 = Comment.create(user_id: 3, game_id: 28, content: "This game is awful... ju
 c34 = Comment.create(user_id: 4, game_id: 28, content: "Seriously.. dark humor at its worst!" )
 c35 = Comment.create(user_id: 5, game_id: 28, content: "Evil... Pure evil!" )
 
+users = [u1, u2, u3, u4, u5]
 
+users.each do |user|
+  Friendship.create(user: user, friend: u2) if user != u2
+end
 
+users.each do |user|
+  Friendship.create(user: user, friend: u1) if user != u1
+end
 
+users.each do |user|
+  Friendship.create(user: user, friend: u3) if user != u3
+end
 
 
 
