@@ -8,7 +8,6 @@ module ApplicationHelper
     current_user != nil
   end
 
-
   def own_game?
     if
       owns = current_user.owned_games.include?(Game.find(params[:id]))

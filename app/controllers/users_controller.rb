@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include ApplicationHelper
 
   def new
     @user = User.new
@@ -15,10 +16,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find_by_id(session[:user_id])
-    friend = User.find_by_id(params[:id])
-    @friendship = Friendship.find_or_initialize_by(user: user, friend: friend)
-    @user = User.find(params[:id])
+    if user_logged_in?
+      user = User.find_by_id(session[:user_id])
+      friend = User.find_by_id(params[:id])
+      @friendship = Friendship.find_or_initialize_by(user: user, friend: friend)
+      @user = User.find(params[:id])
+    else
+      redirect_to '/sessions/new'
+    end
   end
 
   private
