@@ -1,7 +1,11 @@
 class CommentsController < ApplicationController
   def new
-    @game = Game.find(params[:id])
-    @comment = Comment.new
+    if user_logged_in?
+      @game = Game.find(params[:id])
+      @comment = Comment.new
+    else
+      redirect_to "/games/#{params[:game_id]}"
+    end
   end
 
   def create
