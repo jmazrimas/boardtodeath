@@ -1,0 +1,8 @@
+<div class="mid-content-box">
+  <h3>My Friends</h3>
+  <ul>
+  <% @user.confirmed_friends.each do |friend| %>
+    <li><%= link_to friend.username, user_path(friend) %></li>
+  <% end %>
+  </ul>
+</div>
