@@ -1,0 +1,1 @@
+$("<%= escape_javascript("#votesforgameID#{@game.id}") %>").replaceWith("<%= escape_javascript(render partial: 'games/votes', locals: {game: @game}) %>");
