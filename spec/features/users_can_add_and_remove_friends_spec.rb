@@ -18,7 +18,7 @@ feature "users can add, accept and remove friends" do
 
     click_button 'Request Friend'
 
-    expect(page).to have_button 'Remove Friend'
+    expect(page).to have_button 'Rescind Request'
 
     visit "/sessions/new"
 
