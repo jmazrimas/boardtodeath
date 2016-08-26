@@ -10,8 +10,6 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      puts '!!!!!!!!!!!!!!! i didnt save'
-
       @errors = user.errors.full_messages
       render :new
     end
@@ -37,10 +35,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    @user.update_attributes(update_params)
+    if @user.save(validate: false)
       redirect_to @user
     else
-      redirect_to :back
+      redirect_to @user
     end
   end
 
@@ -48,6 +47,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :avatar)
+  end
+
+  def update_params
+    params.require(:user).permit(:avatar)
   end
 
 end

@@ -1,33 +1,10 @@
-<h2>Edit our account</h2>
+<h2>Edit your avatar</h2>
 
-<%= form_for :user, url: "/users/#{@user.id}", method: :patch do |f| %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
+<%= form_for :user, url: "/users/#{@user.id}", method: 'patch' do |f| %>
 
   <div class="field">
     <%= f.label :avatar %><br />
-    <%= f.text_field :avatar, placeholder: 'enter image url here' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.text_field :avatar, placeholder: 'enter image url here', autofocus: true %>
   </div>
 
   <div class="actions">
