@@ -5,7 +5,7 @@
       <%= image_tag @user.avatar, class: 'default_image' %>
     </div>
     <% if current_user.id == @user.id %>
-    <%= link_to 'Edit your account', edit_user_path %>
+    <%= link_to 'Edit your avatar', edit_user_path %>
     <% end %>
 </div>
 
