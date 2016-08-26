@@ -6,10 +6,11 @@ feature "user can register" do
 
     visit "/users/new"
 
-    username = "newuser"
+    username = Faker::Internet.user_name
+    email = Faker::Internet.email
 
     page.fill_in 'user[username]', :with => username
-    page.fill_in 'user[email]', :with => 'new@user.com'
+    page.fill_in 'user[email]', :with => email
     page.fill_in 'user[password]', :with => 'password'
     page.fill_in 'user[password_confirmation]', :with => 'password'
 
@@ -25,8 +26,8 @@ feature "user can register" do
   end
 
   scenario "the user can sign in" do
-    email = "new@user.com"
-    username = "newuser"
+    username = Faker::Internet.user_name
+    email = Faker::Internet.email
     User.create(username: username, email: email, password: "password")
 
     visit "/sessions/new"
@@ -38,7 +39,7 @@ feature "user can register" do
 
     within('nav') do
         expect(page).to have_content "#{username.capitalize}"
-    end 
+    end
 
     click_on 'Log Out'
 
