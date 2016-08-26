@@ -25,6 +25,11 @@ class User < ApplicationRecord
     self.friends.include?(other_user) && other_user.friends.include?(self)
   end
 
+  def unanswered_request?(friend)
+    request = Friendship.find_by(user: self, friend: friend)
+    request && !confirmed_friends.include?(friend)
+  end
+
   def friend_requests
     Friendship.friend_requests(self)
   end
