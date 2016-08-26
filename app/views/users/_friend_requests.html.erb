@@ -2,7 +2,7 @@
   <h3>Friend Requests</p>
   <% current_user.friend_requests.each do |new_friend| %>
     <div class="friend-request">
-      <span class="inline-span"><%= new_friend.email %></span>
+      <span class="inline-span"><%= new_friend.username %></span>
       <span class="inline-span">
       <%= form_for([current_user, @friendship]) do |f| %>
 
