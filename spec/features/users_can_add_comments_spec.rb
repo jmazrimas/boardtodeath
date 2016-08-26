@@ -2,8 +2,9 @@ require 'rails_helper'
 
 feature 'user can add comments on games' do
 
-  email = "new@user.com"
-  username = "newuser"
+    username = Faker::Internet.user_name
+    email = Faker::Internet.email
+
   user = User.create(username: username, email: email, password: "password")
 
   game = Game.create!(title: 'test game', description: 'this is a test game', user_id: user.id)
