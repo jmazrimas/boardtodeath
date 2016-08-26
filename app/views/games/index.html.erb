@@ -10,7 +10,7 @@
   <h2> All Board Games </h2>
 
   <div id="game-list">
-    <%= render @games %>
+    <%= render @games.order('title ASC') %>
   </div>
 
 </div>
