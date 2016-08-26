@@ -12,7 +12,7 @@
 	<div class="center-image">
 		<%= image_tag @game.image, class: 'default_image' %>
 	</div>
-  <% if current_user.id == @game.user.id %>
+  <% if current_user && current_user.id == @game.user.id %>
     <%= link_to 'Edit Image', edit_game_path %>
   <% end %>
 
