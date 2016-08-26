@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include ApplicationHelper
 
   def new
     @user = User.new
@@ -28,6 +27,9 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    if current_user.id != @user.id
+      redirect_to '/sessions/new'
+    end
   end
 
   def update
